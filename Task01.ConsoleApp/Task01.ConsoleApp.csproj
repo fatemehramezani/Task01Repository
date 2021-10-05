@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Task01.ApiConnection\Task01.ApiConnection.csproj" />
+    <ProjectReference Include="..\Task01.ApiConnection\Task01.ApiConnection.csproj" />
   </ItemGroup>
 
 </Project>
