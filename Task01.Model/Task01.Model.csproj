@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Task01.ApiConnection\Task01.Api.csproj" />
-    <ProjectReference Include="..\Task01.Interfaces\Task01.Interfaces.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
 </Project>

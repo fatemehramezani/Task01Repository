@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Task01.ApiConnection\Task01.Api.csproj" />
-    <ProjectReference Include="..\Task01.Interfaces\Task01.Interfaces.csproj" />
+    <ProjectReference Include="..\Task01.Model\Task01.Model.csproj" />
   </ItemGroup>
 
 </Project>
