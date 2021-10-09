@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.Model", "Task01.Mode
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.Common", "Task01.Common\Task01.Common.csproj", "{D74679EB-B95A-4B60-AC0A-8EE8AF33FAA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.DataTests", "Task01.Tests\Task01.DataTests.csproj", "{17B666FF-EE85-43CF-914A-9A84EB34C461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.Data.Tests", "Task01.Tests\Task01.Data.Tests.csproj", "{17B666FF-EE85-43CF-914A-9A84EB34C461}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A714C506-7296-4BF7-82B3-D5A8A9D11CC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01.Test", "Task01.Test\Task01.Test.csproj", "{F3E7D4ED-57E8-4136-911A-B633B5C7C018}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01.Service.Test", "Task01.Test\Task01.Service.Test.csproj", "{F3E7D4ED-57E8-4136-911A-B633B5C7C018}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.Service", "Task.Service\Task.Service.csproj", "{05607550-AB11-4B8B-BD40-CED5B25F5D6F}"
 EndProject
