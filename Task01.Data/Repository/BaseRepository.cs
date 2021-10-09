@@ -10,13 +10,19 @@ namespace Task01.Data.Repository
 
         public BaseRepository(string baseURL)
         {
-            this.BaseURL = baseURL;
+            this.BaseURL = string.Format(baseURL);
         }
 
-        public IList<TModel> Get<TModel>(string requestURL = null)
+        public IList<TModel> Get<TModel>(string requestURL = null, string urlParameter = null)
         {
-            var result = new Requests(this.BaseURL).CallRequest<List<TModel>>(requestURL ?? string.Empty);
+            var result = new Requests(this.BaseURL).CallRequest<List<TModel>>(requestURL ?? string.Empty, urlParameter);
             return result.values;
+        }
+
+        public bool Patch(string requestURL, string patchData)
+        {
+            var result = new Requests(this.BaseURL).CallRequest<object>(requestURL ?? string.Empty, method: Common.APIMethod.PATCH, bodyContent: patchData);
+            return false;
         }
     }
 }

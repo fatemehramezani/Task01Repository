@@ -5,6 +5,8 @@ namespace Task01.Interfaces
 {
     public interface IBaseRepository<TModel> where TModel: class
     {
-        IList<TModel> Get<TModel>(string requestURL);
+        IList<TModel> Get<TModel>(string requestURL = null, string urlParameter = null);
+
+        bool Patch(string requestURL, string patchData);
     }
 }

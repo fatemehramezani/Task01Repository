@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.Data", "Task01.Data\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.Api", "Task01.ApiConnection\Task01.Api.csproj", "{DFA5BDB8-A245-4E74-A031-C71183977EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01.Interfaces", "Task01.Interfaces\Task01.Interfaces.csproj", "{6211DFA1-F9DB-4002-92CB-FC9BB4448296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.Interfaces", "Task01.Interfaces\Task01.Interfaces.csproj", "{6211DFA1-F9DB-4002-92CB-FC9BB4448296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01.Model", "Task01.Model\Task01.Model.csproj", "{FD6A4AA7-7295-41DF-B97E-CD65534A9C17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.Model", "Task01.Model\Task01.Model.csproj", "{FD6A4AA7-7295-41DF-B97E-CD65534A9C17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01.Common", "Task01.Common\Task01.Common.csproj", "{D74679EB-B95A-4B60-AC0A-8EE8AF33FAA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{FD6A4AA7-7295-41DF-B97E-CD65534A9C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD6A4AA7-7295-41DF-B97E-CD65534A9C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD6A4AA7-7295-41DF-B97E-CD65534A9C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D74679EB-B95A-4B60-AC0A-8EE8AF33FAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D74679EB-B95A-4B60-AC0A-8EE8AF33FAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D74679EB-B95A-4B60-AC0A-8EE8AF33FAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D74679EB-B95A-4B60-AC0A-8EE8AF33FAA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Task01.Interfaces;
+﻿using Task01.Interfaces;
 
 namespace Task01.Data.Repository
 {
     public class DataCollection
-    {        
+    {
         public string BaseURL { get; set; }
 
         public DataCollection(string baseURL)
@@ -20,15 +15,23 @@ namespace Task01.Data.Repository
         {
             get
             {
-                return new MerchantOrderRepository(BaseURL);
+                return new MerchantOrderRepository(string.Format(BaseURL, "orders"));
             }
         }
 
-        public IProductRepository ProductRepository
+        public IMerchantOrderLineRepository MerchantOrderLineRepository
         {
             get
             {
-                return new ProductRepository(BaseURL);
+                return new MerchantOrderLineRepository(string.Format(BaseURL, "products"));
+            }
+        }
+
+        public IMerchantProductRepository MerchantProductRepository
+        {
+            get
+            {
+                return new MerchantProductRepository(string.Format(BaseURL, "products"));
             }
         }
     }

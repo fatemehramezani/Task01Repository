@@ -77,7 +77,7 @@ namespace ChannelEngine.Merchant.ApiClient.Model
         public MerchantOrderLineResponse(OrderStatusView? status = default(OrderStatusView?), bool isFulfillmentByMarketplace = default(bool), string gtin = default(string), string description = default(string), decimal? unitVat = default(decimal?), decimal? lineTotalInclVat = default(decimal?), decimal? lineVat = default(decimal?), decimal? originalUnitPriceInclVat = default(decimal?), decimal? originalUnitVat = default(decimal?), decimal? originalLineTotalInclVat = default(decimal?), decimal? originalLineVat = default(decimal?), decimal originalFeeFixed = default(decimal), string bundleProductMerchantProductNo = default(string), List<MerchantOrderLineExtraDataResponse> extraData = default(List<MerchantOrderLineExtraDataResponse>), string channelProductNo = default(string), string merchantProductNo = default(string), int quantity = default(int), int cancellationRequestedQuantity = default(int), decimal unitPriceInclVat = default(decimal), decimal feeFixed = default(decimal), decimal feeRate = default(decimal), Condition? condition = default(Condition?), DateTime? expectedDeliveryDate = default(DateTime?))
         {
             // to ensure "channelProductNo" is required (not null)
-            this.ChannelProductNo = channelProductNo ?? throw new ArgumentNullException("channelProductNo is a required property for MerchantOrderLineResponse and cannot be null");
+            this.ChannelProductNo = channelProductNo ?? string.Empty;//throw new ArgumentNullException("channelProductNo is a required property for MerchantOrderLineResponse and cannot be null");
             this.Quantity = quantity;
             this.UnitPriceInclVat = unitPriceInclVat;
             this.Status = status;
