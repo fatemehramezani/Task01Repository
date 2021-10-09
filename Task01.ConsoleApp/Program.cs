@@ -9,7 +9,7 @@ namespace Task01.ConsoleApp
         public const string baseURL = @"https://api-dev.channelengine.net/api/v2/{0}?apikey=541b989ef78ccb1bad630ea5b85c6ebff9ca3322";
         static void Main(string[] args)
         {
-            Console.WriteLine("1. List of InProgress orders\r\n\r2. List of 5 top products\r\n\r3. Change Stock of a random product\r\n\r============================ \r\n");
+            Console.WriteLine("This app will:\n1. List of InProgress orders\r\n\r2. List of 5 top products\r\n\r3. Change Stock of a random product\r\n\r============================ \r\n");
             var key = System.Console.ReadKey().Key;
 
             var dataCollection = new DataCollection(baseURL);
@@ -23,8 +23,10 @@ namespace Task01.ConsoleApp
             Console.WriteLine($"\n'{soldProducts.Count}' product are selected and top based on price is '{customProducts.First().Name}'");
 
             //Task #3: ● Pick one of the products from these orders and use the API to set the stock of this product to 25.
+            
             var topProduct = soldProducts.FirstOrDefault();
             dataCollection.MerchantProductRepository.UpdateProductName(topProduct.MerchantProductNo, $"UPDATED-{topProduct.Name}");
+            Console.WriteLine($"\n'{topProduct.MerchantProductNo}' is update");
             Console.ReadKey();
         }
     }

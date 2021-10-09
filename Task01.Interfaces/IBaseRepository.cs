@@ -7,6 +7,6 @@ namespace Task01.Interfaces
     {
         IList<TModel> Get<TModel>(string requestURL = null, string urlParameter = null);
 
-        bool Patch(string requestURL, string patchData);
+        TModel Patch<TModel>(string requestURL, string patchData);
     }
 }

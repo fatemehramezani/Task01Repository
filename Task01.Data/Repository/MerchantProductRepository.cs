@@ -12,7 +12,8 @@ namespace Task01.Data.Repository
 
         public IList<MerchantProductRequest> GetProducts(int top = 0)
         {
-            return base.Get<MerchantProductRequest>().Take(top).ToList();
+            var result = base.Get<MerchantProductRequest>();
+            return (top > 0 ? result.Take(top) : result).ToList();
         }
 
         //TODO: Fatemeh make it more general to supprot all columns
@@ -24,7 +25,8 @@ namespace Task01.Data.Repository
             }
 
             var patchContent = $"{{\"PropertiesToUpdate\": [\"name\"], \"MerchantProductRequestModels\": [{{\"MerchantProductNo\": \"{merchantProductNo}\",\"Name\": \"{name}\"}}]}}";
-            return base.Patch(string.Empty, patchContent);
+            var result = base.Patch<ProductCreationResult>(string.Empty, patchContent);
+            return result.AcceptedCount == 1;
         }
     }
 }

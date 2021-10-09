@@ -19,10 +19,10 @@ namespace Task01.Data.Repository
             return result.values;
         }
 
-        public bool Patch(string requestURL, string patchData)
+        public TModel Patch<TModel>(string requestURL, string patchData)
         {
-            var result = new Requests(this.BaseURL).CallRequest<object>(requestURL ?? string.Empty, method: Common.APIMethod.PATCH, bodyContent: patchData);
-            return false;
+            var result = new Requests(this.BaseURL).CallRequest<TModel>(requestURL ?? string.Empty, method: Common.APIMethod.PATCH, bodyContent: patchData);
+            return result.values;
         }
     }
 }
