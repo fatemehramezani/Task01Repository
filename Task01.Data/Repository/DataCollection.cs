@@ -2,7 +2,7 @@
 
 namespace Task01.Data.Repository
 {
-    public class DataCollection
+    public class DataCollection : IDataCollection
     {
         public string BaseURL { get; set; }
 

@@ -1,0 +1,68 @@
+﻿@model IList<ChannelEngine.Merchant.ApiClient.Model.MerchantProductRequest>
+
+@{
+	ViewData["Title"] = "Top 3 products";
+}
+
+<div class="text-center">
+ <h1 class="display-4">Welcome to Product</h1>
+ <h1>Number of products: @Model.Count </h1>
+
+ <table id="product-table">
+  <tr>
+   <th></th>
+   <th>
+	<h2>
+	 Ean
+	</h2>
+   </th>
+   <th>
+	<h2>
+
+	 Name
+	</h2>
+   </th>
+   <th>
+	<h2>
+
+	 Price
+	</h2>
+   </th>
+   <th>
+	<h2>
+
+	 Url
+	</h2>
+   </th>
+   <th>
+	<h2>
+
+	 MerchantProductNo
+	</h2>
+   </th>
+   <th></th>
+  </tr>
+		@foreach (var item in Model)
+		{
+	  <tr>
+	   <td></td>
+	   <td>
+					@Html.DisplayFor(modelItem=> item.Ean)
+	   </td>
+	   <td>
+					@Html.TextBox(item.Name, item.Name)
+	   </td>
+	   <td>
+					@Html.DisplayFor(modelItem=> item.Price)
+	   </td>
+	   <td>
+					@Html.DisplayFor(modelItem=> item.Url)
+	   </td>
+	   <td>
+					@Html.DisplayFor(modelItem=> item.MerchantProductNo)
+	   </td>
+	   <td></td>
+	  </tr>
+		}
+ </table>
+</div>
