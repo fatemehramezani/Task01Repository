@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Task.Service\Task.Service.csproj" />
+    <ProjectReference Include="..\Task.Service\Task01.Service.csproj" />
     <ProjectReference Include="..\Task01.Data\Task01.Data.csproj" />
     <ProjectReference Include="..\Task01.Interfaces\Task01.Interfaces.csproj" />
   </ItemGroup>
