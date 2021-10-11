@@ -41,17 +41,16 @@ namespace Task01.WebApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-        [HttpPost]
-        public IActionResult Edit(MerchantProductRequest model)
+       
+        public IActionResult Edit(string merchantProductNo, string name)
         {
             if (!ModelState.IsValid)
             {
-                return View(model);
-            }
-            var patchContent = $"{{\"PropertiesToUpdate\": [\"name\"], \"MerchantProductRequestModels\": [{{\"MerchantProductNo\": \"{model.MerchantProductNo}\",\"Name\": \"{model.Name}\"}}]}}";
-            var result = ((DataCollection)_collection).MerchantProductRepository.Patch<MerchantProductRequest>(string.Empty, patchContent);
-            return View($"'{model.MerchantProductNo}' is updated");
+                return View();
+            }            
+            var result = ((DataCollection)_collection).MerchantProductRepository.UpdateProductName(merchantProductNo, name);
+            //TODO: Fatemeh fix redirect 
+            return View();
         }
     }
 }

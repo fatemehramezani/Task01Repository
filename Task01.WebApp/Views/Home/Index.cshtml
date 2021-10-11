@@ -39,6 +39,9 @@
 
 	 MerchantProductNo
 	</h2>
+	<h2>
+	 UPDATE NAME
+ </h2>
    </th>
    <th></th>
   </tr>
@@ -61,7 +64,9 @@
 	   <td>
 					@Html.DisplayFor(modelItem=> item.MerchantProductNo)
 	   </td>
-	   <td></td>
+	   <td>
+					@Html.ActionLink("Update Name", "Edit", new { MerchantProductNo= item.MerchantProductNo, Name = item.Name })
+	</td>
 	  </tr>
 		}
  </table>
